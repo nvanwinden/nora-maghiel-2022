@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="script.js"></script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width", initial-scale="1.0">
+		<title>Nora & Maghiel</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+	</head>
+	<body>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
+		<h1>Trouwfeest Nora & Maghiel</h1>
+		<h3><div id="countdown"></div></h3>
+		
+		<div class="container">
+			<div class="item">
+				<nav>
+					<ul>
+						<li><a href="#informatie">informatie // information</a></li>
+						<li><a href="#muziek">stuur een liedje // submit a song</a></li>
+						<li><a href="#locatie">locatie // location</a></li>
+						<li><a href="#contact">contact</a></li>		
+					</ul>
+				</nav>
+			</div>
+		</div>
+	<div><img src="images/P1020072.JPG" alt="Nora en Maghiel Spuistraat" width="30%" height="30%"></div>
+	
+	<div class="container"><p><mark>Gezocht: saxofonist of trompetist</mark><br><br>
+		
+		<mark>Wanted: saxophone or trumpet player</mark>
+	</p></div>
+		<section id="informatie">
+			<h2>Informatie // Information</h2>
+			<p class="info"><b><u>Datum // Date</u></b><br>
+			11 juni 2022 // June 11th 2022<br>
+			</p>
+			<p class="info"><u>Tijd // Time</u><br>
+				17:00 tot laat // 5pm till late<br>
+			</p>
+			<p class="info"><u>Eten // Food</u><br>
+				Vegetarisch + veganistisch // Vegan + vegetarian<br>
+			</p>
+		</section>
+
+		<section id="muziek">
+			<h2>Stuur een liedje // Submit a song</h2>
+		</section>
+
+		<section id="locatie">
+			<h2>Locatie</h2>
+			<p class="info"><b>De tuin van de smid</b><br>
+				Polderpad 8<br>
+				2322LB Leiden<br>
+				<a href="https://www.detuinvandesmid.nl/">www.detuinvandesmid.nl</a>	
+			</p>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2448.6182169130366!2d4.495440316251975!3d52.14126597974426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c664f24c3aaf%3A0x69ef008234efdf08!2sDe%20tuin%20van%20de%20smid!5e0!3m2!1snl!2snl!4v1652610224282!5m2!1snl!2snl" width=80% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	
+		</section>
+
+		<section id="contact" class="contact">
+			<h2>Contact</h2>
+			<p>Nilo van Winden <br>
+				Ceremoniemeester <br>
+				hen/hun they/them <br>
+			<p>noramaghiel2022@gmail.com</p>
+		</section>
+
+		<script>
+			//Get the button
+			var mybutton = document.getElementById("myBtn");
+			
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+			
+			function scrollFunction() {
+			  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				mybutton.style.display = "block";
+			  } else {
+				mybutton.style.display = "none";
+			  }
+			}
+			
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+			  document.body.scrollTop = 0;
+			  document.documentElement.scrollTop = 0;
+			}
+			</script>
+	</body>
+</html>
