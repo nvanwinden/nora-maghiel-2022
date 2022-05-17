@@ -90,3 +90,15 @@ section#contact {
   p.info {
 	line-height: 2;
   }
+
+  .countdown {
+	  display: inline-block;
+	  margin-left: 20px;
+	  margin-right: 20px;
+  }
+
+  h2 {  
+	margin-left: 20px;
+	margin-right: 20px;
+  }
+  
