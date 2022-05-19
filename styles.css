@@ -84,6 +84,7 @@ img {
 	max-width: 750px;
 	block-size: auto;
 	height: auto;
+	margin-bottom: 40px;
 }
 
 /* https://coolors.co/gradient-palette/ebf4f5-b5c6e0?number=7 */
@@ -135,5 +136,5 @@ section#contact {
   h2 {  
 	margin-left: 20px;
 	margin-right: 20px;
+	margin-top: 40px;
   }
-  

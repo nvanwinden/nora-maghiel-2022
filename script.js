@@ -19,7 +19,7 @@ function showRemaining() {
 		return;
 	}
 	var days = Math.floor(distance / _day);
-	document.getElementById('countdown').innerHTML = days + ' dagen te gaan // ' + days + ' days to go';
+	document.getElementById('countdown').innerHTML = '&#127881; ' + days + ' dagen te gaan // ' + days + ' days to go &#127881;';
 }
 
 timer = setInterval(showRemaining, 1000);
