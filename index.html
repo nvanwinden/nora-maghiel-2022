@@ -46,7 +46,17 @@
 
 		<section id="muziek">
 			<h2>Stuur een liedje // Submit a song</h2>
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-Opc2ZqtAAQCIfNSAr_7eCBieKO6tcyHLFwNJt9pReBczbg/viewform?embedded=true" width="90%" height="677" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+			<div>
+				<form method="POST" action="https://script.google.com/macros/s/AKfycbzABY4YBDxcBjwzHzsCoUYULV2kWHeaSmI0tQKLrvfDkwj0wWNFM9_vcPFic7cC8dMu/exec">
+					<label for="email">Email:</label><br>
+					<input type="text" id="email" name="email"><br>
+					<label for="artist">Artist name:</label><br>
+					<input type="text" id="artist" name="artist"><br>
+					<label for="song">Song Title:</label><br>
+					<input type="text" id="song" name="song"><br><br>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
 		</section>
 		<section id="locatie">
 			<h2>Locatie // Location</h2>
@@ -57,7 +67,6 @@
 			</p>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2448.6182169130366!2d4.495440316251975!3d52.14126597974426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c664f24c3aaf%3A0x69ef008234efdf08!2sDe%20tuin%20van%20de%20smid!5e0!3m2!1snl!2snl!4v1652610224282!5m2!1snl!2snl" width=80% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	
 		</section>
-
 		<section id="contact">
 			<h2>Contact</h2>
 			<p class="info">Nilo van Winden <br>
@@ -79,7 +88,7 @@
 				mybutton.style.display = "none";
 			  }
 			}
-			
+
 			// When the user clicks on the button, scroll to the top of the document
 			function topFunction() {
 			  document.body.scrollTop = 0;
