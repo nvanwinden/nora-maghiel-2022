@@ -50,7 +50,7 @@
 		<section id="muziek">
 			<h2>Stuur een liedje // Submit a song</h2>
 			<div>
-				<form name="submit-to-google-sheet" method="POST" onsubmit="checkit()">
+				<form name="submit-to-google-sheet">
 					<label for="email">Email:</label><br>
 					<input type="text" id="email" name="email"><br>
 					<label for="artist">Artist name:</label><br>
@@ -62,20 +62,21 @@
 				<script>
 					const scriptURL = 'https://script.google.com/macros/s/AKfycbzABY4YBDxcBjwzHzsCoUYULV2kWHeaSmI0tQKLrvfDkwj0wWNFM9_vcPFic7cC8dMu/exec'
 					const form = document.forms['submit-to-google-sheet']
+					// function myFunction(t)
+					// {
+					// 	alert('Thank you for your submission!')
+					// }
 
-					function myFunction(t)
-					{
-						alert('Thank you for your submission!')
-					}
-
+					// posts the form data to app script
 					form.addEventListener('submit', e => {
 					  //e.preventDefault()
 					  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 						.then(response => console.log('Success!', response))
 						.catch(error => console.error('Error!', error.message))
-						myFunction();
+						//myFunction();
 					})
 
+					// Sets scroll position so it doesn't jump to top of page
 					document.addEventListener("DOMContentLoaded", function (event) {
 					var scrollpos = sessionStorage.getItem('scrollpos');
 					if (scrollpos) {
@@ -87,7 +88,6 @@
 					window.addEventListener("beforeunload", function (e) {
 						sessionStorage.setItem('scrollpos', window.scrollY);
 					});
-
 				  </script>
 			</div>
 		</section>
