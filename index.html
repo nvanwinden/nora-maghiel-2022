@@ -47,15 +47,45 @@
 		<section id="muziek">
 			<h2>Stuur een liedje // Submit a song</h2>
 			<div>
-				<form method="POST" action="https://script.google.com/macros/s/AKfycbzABY4YBDxcBjwzHzsCoUYULV2kWHeaSmI0tQKLrvfDkwj0wWNFM9_vcPFic7cC8dMu/exec">
+				<form name="submit-to-google-sheet" method="POST" onsubmit="checkit()">
 					<label for="email">Email:</label><br>
 					<input type="text" id="email" name="email"><br>
 					<label for="artist">Artist name:</label><br>
 					<input type="text" id="artist" name="artist"><br>
 					<label for="song">Song Title:</label><br>
 					<input type="text" id="song" name="song"><br><br>
-					<input type="submit" value="Submit">
+					<button type="submit">Submit</button>
 				</form>
+				<script>
+					const scriptURL = 'https://script.google.com/macros/s/AKfycbzABY4YBDxcBjwzHzsCoUYULV2kWHeaSmI0tQKLrvfDkwj0wWNFM9_vcPFic7cC8dMu/exec'
+					const form = document.forms['submit-to-google-sheet']
+
+					function myFunction(t)
+					{
+						alert('Thank you for your submission!')
+					}
+
+					form.addEventListener('submit', e => {
+					  //e.preventDefault()
+					  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+						.then(response => console.log('Success!', response))
+						.catch(error => console.error('Error!', error.message))
+						myFunction();
+					})
+
+					document.addEventListener("DOMContentLoaded", function (event) {
+					var scrollpos = sessionStorage.getItem('scrollpos');
+					if (scrollpos) {
+						window.scrollTo(0, scrollpos);
+						sessionStorage.removeItem('scrollpos');
+					}
+					});
+
+					window.addEventListener("beforeunload", function (e) {
+						sessionStorage.setItem('scrollpos', window.scrollY);
+					});
+
+				  </script>
 			</div>
 		</section>
 		<section id="locatie">
