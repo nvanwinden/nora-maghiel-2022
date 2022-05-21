@@ -8,7 +8,7 @@ input[type=text], select {
 	box-sizing: border-box;
   }
   
-  button[type=submit] {
+  input[type=submit] {
 	width: 100%;
 	background-color: #B5C6E0;
 	color: rgb(59, 58, 58);
@@ -21,7 +21,7 @@ input[type=text], select {
 	font-weight: bold;
   }
   
-  button[type=submit]:hover {
+  input[type=submit]:hover {
 	background-color: #ef83d6;
   }
   
