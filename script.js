@@ -22,7 +22,7 @@ function topFunction() {
 }
 
 /* ****** TIMER ****** */
-var end = new Date('06/11/2022');
+var end = new Date('06/12/2022');
 
 var _second = 1000;
 var _minute = _second * 60;
